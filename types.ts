@@ -5,29 +5,45 @@ export namespace Query1 {
 
   export type Query = {
     readonly __typename?: "Query";
-    readonly users?: ReadonlyArray<Users | null> | null;
+    readonly a1?: A1 | null;
+    readonly a2?: A2 | null;
+    readonly b1?: B1 | null;
   };
 
-  export type Users = MyFragment.Fragment;
-}
-
-export namespace Query2 {
-  export type Variables = {};
-
-  export type Query = {
-    readonly __typename?: "Query";
-    readonly vE2_User?: ReadonlyArray<Ve2User | null> | null;
+  export type A1 = {
+    readonly __typename?: "Parent1";
+    readonly id: string;
+    readonly url: string;
+    readonly user?: User | null;
   };
 
-  export type VE2User = {
+  export type User = {
     readonly __typename?: "User_Special";
     readonly id: string;
     readonly name: string;
   };
-}
 
-export namespace my_fragment {
-  export type Fragment = {
+  export type A2 = {
+    readonly __typename?: "Parent1";
+    readonly id: string;
+    readonly url: string;
+    readonly user?: _User | null;
+  };
+
+  export type _User = {
+    readonly __typename?: "User_Special";
+    readonly id: string;
+    readonly name: string;
+  };
+
+  export type B1 = {
+    readonly __typename?: "Parent2";
+    readonly id: string;
+    readonly url: string;
+    readonly user?: __User | null;
+  };
+
+  export type _User = {
     readonly __typename?: "User_Special";
     readonly id: string;
     readonly name: string;

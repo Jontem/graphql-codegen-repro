@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+/* import gql from "graphql-tag";
 import * as Types from "./types";
 
 const query = gql`
@@ -9,3 +9,4 @@ const query = gql`
     }
   }
 `;
+ */

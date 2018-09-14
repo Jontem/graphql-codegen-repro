@@ -1,14 +1,31 @@
 import gql from "graphql-tag";
-import * as Types from "./types";
-
+F
 const query = gql`
   query Query1 {
-    users {
-      ...my_fragment
+    a1: parent1 {
+      id
+      url
+      user {
+        id
+        name
+      }
     }
-  }
-  fragment my_fragment on User_Special {
-    id
-    name
+    a2: parent1 {
+      id
+      url
+      user {
+        id
+        name
+      }
+    }
+
+    b1: parent2 {
+      id
+      url
+      user {
+        id
+        name
+      }
+    }
   }
 `;
