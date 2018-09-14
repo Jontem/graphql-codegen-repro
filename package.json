@@ -1,0 +1,20 @@
+{
+  "name": "graphql-codegen-repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Jontem/graphql-codegen-repro.git",
+  "author": "Jonathan Mourtada <jonathan.mourtada@divid.se>",
+  "license": "MIT",
+  "scripts": {
+    "generate": "cross-env CODEGEN_IMMUTABLE_TYPES=true gql-gen --require ts-node/register --schema schema.ts --template graphql-codegen-typescript-template --out types.ts --skip-schema index.ts"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "graphql": "^14.0.2",
+    "graphql-code-generator": "^0.12.1",
+    "graphql-codegen-typescript-template": "^0.12.1",
+    "graphql-tag": "^2.9.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  }
+}
