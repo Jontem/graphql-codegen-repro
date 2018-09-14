@@ -2,12 +2,14 @@ import { GraphQLSchema, buildSchema } from "graphql";
 
 export const schema = buildSchema(`
 
-type User {
+type User_Special {
     id: String!
     name: String!
 }
 
+
 type Query {
-    users: [User]
+    users: [User_Special]
+    vE2_User: [User_Special]
 }
 `);

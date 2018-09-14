@@ -2,12 +2,12 @@ import gql from "graphql-tag";
 import * as Types from "./types";
 
 const query = gql`
-  query MyQuery {
+  query Query1 {
     users {
-      ...MY_User_fragment
+      ...my_fragment
     }
   }
-  fragment MY_User_fragment on User {
+  fragment my_fragment on User_Special {
     id
     name
   }

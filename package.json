@@ -6,7 +6,7 @@
   "author": "Jonathan Mourtada <jonathan.mourtada@divid.se>",
   "license": "MIT",
   "scripts": {
-    "generate": "cross-env CODEGEN_IMMUTABLE_TYPES=true gql-gen --require ts-node/register --schema schema.ts --template graphql-codegen-typescript-template --out types.ts --skip-schema index.ts"
+    "generate": "cross-env CODEGEN_IMMUTABLE_TYPES=true gql-gen --require ts-node/register --schema schema.ts --template graphql-codegen-typescript-template --out types.ts --skip-schema *.ts"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
